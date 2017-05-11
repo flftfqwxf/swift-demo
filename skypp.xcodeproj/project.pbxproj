@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ADFA031B30D4E89DFAC14ECE /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFA00C247EE36D32A84ACB8 /* config.swift */; };
 		CF05A7B81EB338C400F35840 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF05A7B71EB338C400F35840 /* AppDelegate.swift */; };
 		CF05A7BA1EB338C400F35840 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF05A7B91EB338C400F35840 /* ViewController.swift */; };
 		CF05A7BD1EB338C400F35840 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF05A7BB1EB338C400F35840 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ADFA00C247EE36D32A84ACB8 /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
 		CF05A7B41EB338C400F35840 /* skypp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = skypp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF05A7B71EB338C400F35840 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF05A7B91EB338C400F35840 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				CF05A7BE1EB338C400F35840 /* Assets.xcassets */,
 				CF05A7C01EB338C400F35840 /* LaunchScreen.storyboard */,
 				CF05A7C31EB338C400F35840 /* Info.plist */,
+				ADFA00C247EE36D32A84ACB8 /* config.swift */,
 			);
 			path = skypp;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			files = (
 				CF05A7BA1EB338C400F35840 /* ViewController.swift in Sources */,
 				CF05A7B81EB338C400F35840 /* AppDelegate.swift in Sources */,
+				ADFA031B30D4E89DFAC14ECE /* config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +518,7 @@
 				CF05A7DE1EB338C400F35840 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF05A7DF1EB338C400F35840 /* Build configuration list for PBXNativeTarget "skyppTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +527,7 @@
 				CF05A7E11EB338C400F35840 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF05A7E21EB338C400F35840 /* Build configuration list for PBXNativeTarget "skyppUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +536,7 @@
 				CF05A7E41EB338C400F35840 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
