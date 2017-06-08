@@ -64,7 +64,8 @@ class ViewController: UIViewController {
     // FIXME: - 提醒
 
     func beginSC() {
-        time = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(changeLabel, userInfo: "s", repeats: true)
+        time = Timer.scheduledTimer(timeInterval: 1.0,
+                                    target: self, selector: #selector(changeLabel),userInfo: "s", repeats: true)
     }
 
     func stopSC() {

@@ -32,6 +32,27 @@
 			remoteGlobalIDString = CF05A7B31EB338C400F35840;
 			remoteInfo = skypp;
 		};
+		CF9C87611EC9B3CF0023C39F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF9C875B1EC9B3CE0023C39F /* video.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CF9C872A1EC9B3CE0023C39F;
+			remoteInfo = video;
+		};
+		CF9C87631EC9B3CF0023C39F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF9C875B1EC9B3CE0023C39F /* video.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CF9C873E1EC9B3CE0023C39F;
+			remoteInfo = videoTests;
+		};
+		CF9C87651EC9B3CF0023C39F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF9C875B1EC9B3CE0023C39F /* video.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CF9C87491EC9B3CE0023C39F;
+			remoteInfo = videoUITests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +70,7 @@
 		CF05A7D31EB338C400F35840 /* skyppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = skyppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF05A7D71EB338C400F35840 /* skyppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = skyppUITests.swift; sourceTree = "<group>"; };
 		CF05A7D91EB338C400F35840 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF9C875B1EC9B3CE0023C39F /* video.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = video.xcodeproj; path = video/video.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +121,7 @@
 		CF05A7B61EB338C400F35840 /* skypp */ = {
 			isa = PBXGroup;
 			children = (
+				CF9C875B1EC9B3CE0023C39F /* video.xcodeproj */,
 				CF05A7B71EB338C400F35840 /* AppDelegate.swift */,
 				CF05A7B91EB338C400F35840 /* ViewController.swift */,
 				CF05A7BB1EB338C400F35840 /* Main.storyboard */,
@@ -126,6 +149,16 @@
 				CF05A7D91EB338C400F35840 /* Info.plist */,
 			);
 			path = skyppUITests;
+			sourceTree = "<group>";
+		};
+		CF9C875C1EC9B3CE0023C39F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF9C87621EC9B3CF0023C39F /* video.app */,
+				CF9C87641EC9B3CF0023C39F /* videoTests.xctest */,
+				CF9C87661EC9B3CF0023C39F /* videoUITests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +257,12 @@
 			mainGroup = CF05A7AB1EB338C400F35840;
 			productRefGroup = CF05A7B51EB338C400F35840 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CF9C875C1EC9B3CE0023C39F /* Products */;
+					ProjectRef = CF9C875B1EC9B3CE0023C39F /* video.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				CF05A7B31EB338C400F35840 /* skypp */,
@@ -232,6 +271,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CF9C87621EC9B3CF0023C39F /* video.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = video.app;
+			remoteRef = CF9C87611EC9B3CF0023C39F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CF9C87641EC9B3CF0023C39F /* videoTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = videoTests.xctest;
+			remoteRef = CF9C87631EC9B3CF0023C39F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CF9C87661EC9B3CF0023C39F /* videoUITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = videoUITests.xctest;
+			remoteRef = CF9C87651EC9B3CF0023C39F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CF05A7B21EB338C400F35840 /* Resources */ = {
