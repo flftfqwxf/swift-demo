@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ADFA031B30D4E89DFAC14ECE /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFA00C247EE36D32A84ACB8 /* config.swift */; };
+		BBC991013F4D511A218B3D84 /* Pods_skypp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8ABD750099C8A4ED97B1A1C /* Pods_skypp.framework */; };
 		CF05A7B81EB338C400F35840 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF05A7B71EB338C400F35840 /* AppDelegate.swift */; };
 		CF05A7BA1EB338C400F35840 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF05A7B91EB338C400F35840 /* ViewController.swift */; };
 		CF05A7BD1EB338C400F35840 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF05A7BB1EB338C400F35840 /* Main.storyboard */; };
@@ -56,6 +57,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C5A493E53335FC2D082CA1F /* Pods_skyppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_skyppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FFFB4464B8DA39E1120F927 /* Pods-skypp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-skypp.release.xcconfig"; path = "Pods/Target Support Files/Pods-skypp/Pods-skypp.release.xcconfig"; sourceTree = "<group>"; };
+		7C5439B155F7E58DD5ED2BBE /* Pods_skyppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_skyppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8ABD750099C8A4ED97B1A1C /* Pods_skypp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_skypp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD35C01D1FD8BAE0BDC42EAA /* Pods-skypp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-skypp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-skypp/Pods-skypp.debug.xcconfig"; sourceTree = "<group>"; };
 		ADFA00C247EE36D32A84ACB8 /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
 		CF05A7B41EB338C400F35840 /* skypp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = skypp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF05A7B71EB338C400F35840 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBC991013F4D511A218B3D84 /* Pods_skypp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +105,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AAAD13BF05913B42C27CA51E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8ABD750099C8A4ED97B1A1C /* Pods_skypp.framework */,
+				7C5439B155F7E58DD5ED2BBE /* Pods_skyppTests.framework */,
+				4C5A493E53335FC2D082CA1F /* Pods_skyppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC5E4718ED19A822FEEAC221 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AD35C01D1FD8BAE0BDC42EAA /* Pods-skypp.debug.xcconfig */,
+				5FFFB4464B8DA39E1120F927 /* Pods-skypp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CF05A7AB1EB338C400F35840 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +131,8 @@
 				CF05A7CB1EB338C400F35840 /* skyppTests */,
 				CF05A7D61EB338C400F35840 /* skyppUITests */,
 				CF05A7B51EB338C400F35840 /* Products */,
+				AC5E4718ED19A822FEEAC221 /* Pods */,
+				AAAD13BF05913B42C27CA51E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,9 +196,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF05A7DC1EB338C400F35840 /* Build configuration list for PBXNativeTarget "skypp" */;
 			buildPhases = (
+				CCFDD76854EDD5D475665E57 /* [CP] Check Pods Manifest.lock */,
 				CF05A7B01EB338C400F35840 /* Sources */,
 				CF05A7B11EB338C400F35840 /* Frameworks */,
 				CF05A7B21EB338C400F35840 /* Resources */,
+				8B301E9BA493DB1DC9945D0F /* [CP] Embed Pods Frameworks */,
+				6A1C17279BB8E6ABDEDF94A4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -229,7 +260,7 @@
 				TargetAttributes = {
 					CF05A7B31EB338C400F35840 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = MXH5SL2Q58;
+						DevelopmentTeam = 2R9B29DL8V;
 						ProvisioningStyle = Automatic;
 					};
 					CF05A7C71EB338C400F35840 = {
@@ -322,6 +353,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6A1C17279BB8E6ABDEDF94A4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-skypp/Pods-skypp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B301E9BA493DB1DC9945D0F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-skypp/Pods-skypp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCFDD76854EDD5D475665E57 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CF05A7B01EB338C400F35840 /* Sources */ = {
@@ -480,9 +559,10 @@
 		};
 		CF05A7DD1EB338C400F35840 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD35C01D1FD8BAE0BDC42EAA /* Pods-skypp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MXH5SL2Q58;
+				DEVELOPMENT_TEAM = 2R9B29DL8V;
 				INFOPLIST_FILE = skypp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flftfqwxf.skypp;
@@ -493,9 +573,10 @@
 		};
 		CF05A7DE1EB338C400F35840 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FFFB4464B8DA39E1120F927 /* Pods-skypp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MXH5SL2Q58;
+				DEVELOPMENT_TEAM = 2R9B29DL8V;
 				INFOPLIST_FILE = skypp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flftfqwxf.skypp;
