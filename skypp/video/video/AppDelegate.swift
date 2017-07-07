@@ -18,8 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         let rect=UIScreen.main.bounds
         let mainWindow = UIWindow(frame: rect)
-        mainWindow.rootViewController=UINavigationController(rootViewController: IndexViewController())
-//        mainWindow.rootViewController=IndexViewController()
+//        mainWindow.rootViewController=UINavigationController(rootViewController: IndexViewController())
+        mainWindow.rootViewController=IndexViewController()
 
         window=mainWindow
         window?.backgroundColor = .black

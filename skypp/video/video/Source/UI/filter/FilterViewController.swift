@@ -18,38 +18,61 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
 //        modalPresentationStyle = .currentContext
 //        modalTransitionStyle = .coverVertical
 //        definesPresentationContext = true
-        view.backgroundColor = .red
+//        modalPresentationStyle = .custom
+        setFilterContainer()
+//        addMask()
+//        modalTransitionStyle = .crossDissolve
+//        modalPresentationStyle = .custom
+//        self.updatePreferredContentSizeWithTraitCollection(self.traitCollection)
+
+        // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func dissmissFilterFun(_ sender: Any) {
+//       print(self.presentingViewController?.view.alpha)
+//        print(self.presentedViewController?.view.alpha)
+
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    func setDismiss() {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
+
+    }
+    func setFilterContainer(){
         let nib = UINib(nibName: "FilterViewCell", bundle: nil)
-//        let view = FilterViewCell().view!
-//        filterContainer.register(UITableViewCell.self, forCellReuseIdentifier: "filterList")
         filterContainer.register( nib , forCellReuseIdentifier: "filterList")
         filterContainer.delegate = self
         filterContainer.dataSource = self
         filterContainer.backgroundColor = .red
-        
         filterContainer.bounces = false
         filterContainer.separatorColor = kThemeLineGray
         filterContainer.separatorInset = UIEdgeInsetsMake(0, 28, 0, 28)
         filterContainer.tableFooterView = UIView()
         filterContainer.tableHeaderView = UIView()
         self.view.addSubview(filterContainer)
-        self.updatePreferredContentSizeWithTraitCollection(self.traitCollection)
 
-        // Do any additional setup after loading the view.
     }
     func updatePreferredContentSizeWithTraitCollection(_ traitCollection: UITraitCollection) {
         self.preferredContentSize = CGSize(width: self.view.bounds.size.width, height: traitCollection.verticalSizeClass == .compact ? 270 : 420)
-        
+//        self.view.frame = CGRect(origin: .zero, size: CGSize(width: self.view.bounds.size.width, height: traitCollection.verticalSizeClass == .compact ? 270 : 420))
 //        slider.maximumValue = Float(self.preferredContentSize.height)
 //        slider.minimumValue = 220
 //        slider.value = self.slider.maximumValue
     }
     
-    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.willTransition(to: newCollection, with: coordinator)
-        self.updatePreferredContentSizeWithTraitCollection(newCollection)
+//    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+//        super.willTransition(to: newCollection, with: coordinator)
+//        self.updatePreferredContentSizeWithTraitCollection(newCollection)
+//    }
+    func addMask() {
+        let dimmingView = UIView(frame: self.view.bounds)
+        dimmingView.backgroundColor = UIColor.red
+        dimmingView.isOpaque = false
+        dimmingView.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
+        //        dismissView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.taptst()))
+        dimmingView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dimmingViewTapped(_:))))
+        view.addSubview(dimmingView)
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -78,4 +101,9 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
     }
     */
 
+}
+extension FilterViewController {
+    func dimmingViewTapped(_ sender: UITapGestureRecognizer) {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
 }

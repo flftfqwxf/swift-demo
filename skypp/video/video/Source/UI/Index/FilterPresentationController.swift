@@ -8,6 +8,6 @@
 
 import UIKit
 
-class FilterPresentationController: UIPresentationController {
+class FilterPresentationController: UIPresentationController,UIViewControllerTransitioningDelegate {
 
 }

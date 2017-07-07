@@ -21,6 +21,9 @@
 		CF59D62E1F05F80000F68F21 /* CustomPresentationSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59D62A1F05F80000F68F21 /* CustomPresentationSecondViewController.swift */; };
 		CF59D62F1F05F80000F68F21 /* CustomPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59D62B1F05F80000F68F21 /* CustomPresentationAnimator.swift */; };
 		CF59D6301F05F80000F68F21 /* CustomPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59D62C1F05F80000F68F21 /* CustomPresentationController.swift */; };
+		CF59D6321F0A31F700F68F21 /* FilterPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59D6311F0A31F700F68F21 /* FilterPresentationController.swift */; };
+		CF59D6341F0CED8200F68F21 /* TopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59D6331F0CED8200F68F21 /* TopAnimator.swift */; };
+		CF59D6361F0E2CE400F68F21 /* DismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59D6351F0E2CE400F68F21 /* DismissAnimator.swift */; };
 		CF5EFCE11F04A63B0048FD58 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5EFCDF1F04A63B0048FD58 /* FilterViewController.swift */; };
 		CF5EFCE21F04A63B0048FD58 /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF5EFCE01F04A63B0048FD58 /* FilterViewController.xib */; };
 		CF5EFCE51F04E5750048FD58 /* tttViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5EFCE31F04E5750048FD58 /* tttViewController.swift */; };
@@ -108,6 +111,9 @@
 		CF59D62A1F05F80000F68F21 /* CustomPresentationSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentationSecondViewController.swift; sourceTree = "<group>"; };
 		CF59D62B1F05F80000F68F21 /* CustomPresentationAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentationAnimator.swift; sourceTree = "<group>"; };
 		CF59D62C1F05F80000F68F21 /* CustomPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentationController.swift; sourceTree = "<group>"; };
+		CF59D6311F0A31F700F68F21 /* FilterPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterPresentationController.swift; sourceTree = "<group>"; };
+		CF59D6331F0CED8200F68F21 /* TopAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopAnimator.swift; sourceTree = "<group>"; };
+		CF59D6351F0E2CE400F68F21 /* DismissAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissAnimator.swift; sourceTree = "<group>"; };
 		CF5EFCDF1F04A63B0048FD58 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		CF5EFCE01F04A63B0048FD58 /* FilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
 		CF5EFCE31F04E5750048FD58 /* tttViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tttViewController.swift; sourceTree = "<group>"; };
@@ -281,6 +287,7 @@
 			children = (
 				ADFA0CFDF8A18E1D7B5581A6 /* ViewController.swift */,
 				CF0C78811EF7BB540069CE48 /* IndexViewController.swift */,
+				CF59D6311F0A31F700F68F21 /* FilterPresentationController.swift */,
 				CF0C78821EF7BB540069CE48 /* IndexViewController.xib */,
 				CF4D44A81EFCF88B00CA5F60 /* FilterViewCell.swift */,
 				CF4D44A91EFCF88B00CA5F60 /* FilterViewCell.xib */,
@@ -366,6 +373,8 @@
 				CF6C40601EF7CE2200833C1A /* FocusAndSnapshotToVCDismissAnimation.swift */,
 				CF6C40611EF7CE2200833C1A /* UINavigationController+FDFullscreenPopGesture.h */,
 				CF6C40621EF7CE2200833C1A /* UINavigationController+FDFullscreenPopGesture.m */,
+				CF59D6331F0CED8200F68F21 /* TopAnimator.swift */,
+				CF59D6351F0E2CE400F68F21 /* DismissAnimator.swift */,
 			);
 			path = Transition;
 			sourceTree = "<group>";
@@ -703,6 +712,7 @@
 				CF6C40C11EF7D9B100833C1A /* UIColor+Extension.swift in Sources */,
 				CF6C40351EF7CD6F00833C1A /* TopSearchBar.swift in Sources */,
 				CF6C40951EF7CE2200833C1A /* BlurAndSnapshotFromVCPresentAnimation.swift in Sources */,
+				CF59D6341F0CED8200F68F21 /* TopAnimator.swift in Sources */,
 				CF6C40C41EF7D9B100833C1A /* UIImage+Size.swift in Sources */,
 				CF4D44B21EFD0EB600CA5F60 /* ContrainseViewController.swift in Sources */,
 				CF6C40C71EF7D9B100833C1A /* UITableView+Refresh.swift in Sources */,
@@ -714,6 +724,7 @@
 				CF6C40DC1EF903EF00833C1A /* Queue.swift in Sources */,
 				CF6C407E1EF7CE2200833C1A /* NSMutableAttributedString+DefaultStyle.swift in Sources */,
 				CF6C407D1EF7CE2200833C1A /* Int+Limit.swift in Sources */,
+				CF59D6321F0A31F700F68F21 /* FilterPresentationController.swift in Sources */,
 				CF6C40E01EF90B8100833C1A /* video-Bridging-Header.h in Sources */,
 				CF6C40CC1EF7D9B100833C1A /* UIView+Xib.swift in Sources */,
 				CF6C40981EF7CE2200833C1A /* FocusAndSnapshotToVCDismissAnimation.swift in Sources */,
@@ -736,6 +747,7 @@
 				CF6C40CE1EF7D9B100833C1A /* UIViewController+Filter.swift in Sources */,
 				CF59D62F1F05F80000F68F21 /* CustomPresentationAnimator.swift in Sources */,
 				CF6C40DD1EF903EF00833C1A /* StringAttributes.swift in Sources */,
+				CF59D6361F0E2CE400F68F21 /* DismissAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

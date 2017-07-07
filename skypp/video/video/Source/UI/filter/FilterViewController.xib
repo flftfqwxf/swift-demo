@@ -21,19 +21,30 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AXe-NE-k2r">
-                    <rect key="frame" x="0.0" y="50" width="375" height="150"/>
+                    <rect key="frame" x="0.0" y="70" width="375" height="150"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="150" id="Ik9-0h-sMP"/>
                     </constraints>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5H-9Z-wi8">
+                    <rect key="frame" x="161" y="232" width="52" height="30"/>
+                    <state key="normal" title="dismiss"/>
+                    <connections>
+                        <action selector="dissmissFilterFun:" destination="-1" eventType="touchUpInside" id="Qr4-Kl-qMb"/>
+                    </connections>
+                </button>
             </subviews>
+            <color key="backgroundColor" red="1" green="0.38133035050000003" blue="0.21808027260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="AXe-NE-k2r" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="PNJ-Av-jG4"/>
+                <constraint firstItem="s5H-9Z-wi8" firstAttribute="top" secondItem="AXe-NE-k2r" secondAttribute="bottom" constant="12" id="Fjq-LT-Pt1"/>
+                <constraint firstItem="s5H-9Z-wi8" firstAttribute="centerX" secondItem="AXe-NE-k2r" secondAttribute="centerX" id="JoA-eD-2pn"/>
+                <constraint firstItem="AXe-NE-k2r" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="PNJ-Av-jG4"/>
                 <constraint firstItem="AXe-NE-k2r" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="gGU-DI-kQq"/>
                 <constraint firstItem="AXe-NE-k2r" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mmX-qG-3DF"/>
                 <constraint firstAttribute="trailing" secondItem="AXe-NE-k2r" secondAttribute="trailing" id="oJA-LO-BVx"/>
             </constraints>
+            <point key="canvasLocation" x="35.5" y="53.5"/>
         </view>
     </objects>
 </document>

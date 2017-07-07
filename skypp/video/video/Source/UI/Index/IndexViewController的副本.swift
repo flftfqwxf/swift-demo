@@ -42,10 +42,10 @@ class FilterCell: UITableViewCell {
 
 class IndexViewController: UIViewController,UIViewControllerTransitioningDelegate {
 
-     var filterViewController : FilterViewController = FilterViewController()
+    lazy var filterViewController : FilterViewController = FilterViewController()
 //    lazy var filterViewController : CustomPresentationSecondViewController = CustomPresentationSecondViewController()
 
-   
+    lazy var customPresentationController: CustomPresentationController = CustomPresentationController(presentedViewController: self.filterViewController, presenting: self)
 
     var filterContainer: UIView!
     @IBOutlet weak var searchBar: TopSearchBar!
@@ -57,7 +57,6 @@ class IndexViewController: UIViewController,UIViewControllerTransitioningDelegat
 //        transition.type = kCATransitionReveal
 //        transition.subtype = kCATransitionFromTop
 //        view.window!.layer.add(transition, forKey: kCATransition)
-        
         self.present(filterViewController, animated: true, completion: nil)
 
 
@@ -66,28 +65,27 @@ class IndexViewController: UIViewController,UIViewControllerTransitioningDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.modalPresentationStyle = .custom
-        filterViewController.transitioningDelegate = self
-        filterViewController.modalPresentationStyle = .custom
+//        modalPresentationStyle = .currentContext
+//        definesPresentationContext = true
+        filterViewController.transitioningDelegate = customPresentationController
 
+//        self.transition(from: <#T##UIViewController#>, to: <#T##UIViewController#>, duration: <#T##TimeInterval#>, options: <#T##UIViewAnimationOptions#>, animations: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>, completion: <#T##((Bool) -> Void)?##((Bool) -> Void)?##(Bool) -> Void#>)
         initWebView()
+//        self.view.addSubview(filterContainer)
+//        filterContainer.snp.makeConstraints { (make) in
+////            make.top.equalTo(searchBar)
+//            make.edges.equalToSuperview()
+//            make.top.equalTo(searchBar).offset(40)
+//        }
         loadingEffect()
+        // Do any additional setup after loading the view.
     }
-    //通过变量将 动画实例缓存起来，否则此实例在动画运行完之后，将会被回收，如果里面定义了方法，事件，手势等都将无效，并且不会报错
-    var topAnimator = TopAnimator()
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return topAnimator
+    override func viewWillAppear(_ animated: Bool){
+        super.viewWillAppear(false)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        print("viewWillAppear")
     }
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return nil
-    }
-    
-//    override func viewWillAppear(_ animated: Bool){
-//        super.viewWillAppear(false)
-//        self.navigationController?.setNavigationBarHidden(true, animated: false)
-//        print("viewWillAppear")
-//    }
-   public func loadingEffect()  {
+    func loadingEffect()  {
         
          loading = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
         
@@ -110,7 +108,11 @@ class IndexViewController: UIViewController,UIViewControllerTransitioningDelegat
         loading.startAnimating()
         loading.hidesWhenStopped = true
     }
-
+    func snp (make:ConstraintMaker) ->Void {
+        make.center.equalToSuperview()
+        make.width.equalTo(200)
+        make.height.equalTo(100)
+    }
     func hiddenLoading()  {
         loading.stopAnimating()
         effectView.removeFromSuperview()
