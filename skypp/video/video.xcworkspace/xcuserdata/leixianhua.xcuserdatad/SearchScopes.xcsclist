@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SearchScopes
+   version = "1.1">
+   <Scope
+      name = "UI"
+      predicate = "location_workspace_group == &quot;{\&quot;IDEValuesAsTree\&quot;:{\&quot;video\&quot;:{\&quot;video\&quot;:{\&quot;video\&quot;:{\&quot;Source\&quot;:{\&quot;UI\&quot;:\&quot;\&quot;}}}}}}&quot;"
+      uuid = "918A4D87-9BCD-40B2-BE14-2223C97A289E">
+   </Scope>
+</SearchScopes>

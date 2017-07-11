@@ -79,7 +79,7 @@ class IndexViewController: UIViewController,UIViewControllerTransitioningDelegat
         return topAnimator
     }
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return nil
+        return topAnimator
     }
     
 //    override func viewWillAppear(_ animated: Bool){
@@ -119,6 +119,8 @@ class IndexViewController: UIViewController,UIViewControllerTransitioningDelegat
         
         let webViewConfig = WKWebViewConfiguration()
         let webView = WKWebView(frame: .zero, configuration: webViewConfig)
+        webView.backgroundColor = UIColor.white
+        webView.alpha = 1
         self.view.addSubview(webView)
         webView.snp.makeConstraints{ (make) in
             make.top.equalTo(self.searchBar.snp.bottom).offset(10)
@@ -127,14 +129,24 @@ class IndexViewController: UIViewController,UIViewControllerTransitioningDelegat
         let headers: HTTPHeaders = [
             "Sign": "4455f0b238d96b12e3c9adae866438eb"
         ]
-        Alamofire.request("http://127.0.0.1:8033/bb1ddc9459253909d379/html", headers: headers).responseJSON { response in
+        Alamofire.request("http://192.168.25.134:8033/bb1ddc9459253909d379/html", headers: headers).validate().responseJSON { response in
 //            print(response["content"])
-            if let content = response.data {
-                let data = JSON(data:content)
-                print(data)
-                webView.loadHTMLString(data["content"].stringValue, baseURL: nil)
-                self.hiddenLoading()
+            switch response.result {
+            case .success:
+                if let content = response.data {
+                    let data = JSON(data:content)
+                    print(data)
+                    webView.loadHTMLString(data["content"].stringValue, baseURL: nil)
+                    self.hiddenLoading()
+                }else {
+                    
+                }
+            case .failure(let error):
+                let status = response.response?.statusCode
+                print(status)
+                print(error)
             }
+            
             
         }
         

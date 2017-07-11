@@ -287,8 +287,8 @@
 			children = (
 				ADFA0CFDF8A18E1D7B5581A6 /* ViewController.swift */,
 				CF0C78811EF7BB540069CE48 /* IndexViewController.swift */,
-				CF59D6311F0A31F700F68F21 /* FilterPresentationController.swift */,
 				CF0C78821EF7BB540069CE48 /* IndexViewController.xib */,
+				CF59D6311F0A31F700F68F21 /* FilterPresentationController.swift */,
 				CF4D44A81EFCF88B00CA5F60 /* FilterViewCell.swift */,
 				CF4D44A91EFCF88B00CA5F60 /* FilterViewCell.xib */,
 				CF4D44B01EFD0EB600CA5F60 /* ContrainseViewController.swift */,

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SnapKit
 class FilterViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var filterItems = ["item1","item2","item3"]
@@ -15,11 +15,19 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var filterContainer: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
 //        modalPresentationStyle = .currentContext
 //        modalTransitionStyle = .coverVertical
 //        definesPresentationContext = true
 //        modalPresentationStyle = .custom
         setFilterContainer()
+//        view.isUserInteractionEnabled = false
+//        view.snp.makeConstraints { (make) in
+//            make.bottom.equalTo(filterContainer)
+//        }
+//        view.backgroundColor = UIColor.red
+        
 //        addMask()
 //        modalTransitionStyle = .crossDissolve
 //        modalPresentationStyle = .custom
@@ -49,7 +57,10 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
         filterContainer.separatorInset = UIEdgeInsetsMake(0, 28, 0, 28)
         filterContainer.tableFooterView = UIView()
         filterContainer.tableHeaderView = UIView()
-        self.view.addSubview(filterContainer)
+//        self.view.addSubview(filterContainer)
+        filterContainer.snp.makeConstraints { (make) in
+            make.width.equalToSuperview()
+        }
 
     }
     func updatePreferredContentSizeWithTraitCollection(_ traitCollection: UITraitCollection) {
@@ -66,7 +77,7 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
 //    }
     func addMask() {
         let dimmingView = UIView(frame: self.view.bounds)
-        dimmingView.backgroundColor = UIColor.red
+        dimmingView.backgroundColor = UIColor.darkGray
         dimmingView.isOpaque = false
         dimmingView.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
         //        dismissView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.taptst()))

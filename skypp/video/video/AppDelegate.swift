@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         mainWindow.rootViewController=IndexViewController()
 
         window=mainWindow
-        window?.backgroundColor = .black
+//        window?.backgroundColor = .black
         window?.makeKeyAndVisible()
         return true
     }
